@@ -1,0 +1,30 @@
+source 'https://rubygems.org'
+
+# Web framework
+gem 'sinatra'
+gem 'puma'
+gem 'rack-test'
+
+# Database
+gem 'sequel'
+gem 'pg'
+
+# JSON/API
+gem 'oj'
+gem 'multi_json'
+
+# HTTP client
+gem 'faraday'
+gem 'typhoeus'
+
+# Background jobs
+gem 'sidekiq'
+
+# Utils
+gem 'dotenv'
+gem 'rake'
+gem 'bcrypt'
+
+# Development
+gem 'pry', group: :development
+gem 'rubocop', group: :development

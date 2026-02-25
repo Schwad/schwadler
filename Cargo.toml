@@ -1,0 +1,85 @@
+[package]
+name = "schwadler"
+version = "0.1.0"
+edition = "2021"
+description = "A faster Bundler, written in Rust"
+authors = ["SchwadLabs"]
+
+[[bin]]
+name = "schwadl"
+path = "src/main.rs"
+
+[dependencies]
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# HTTP client with connection pooling
+reqwest = { version = "0.12", features = ["json", "gzip", "stream"] }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Version resolution (PubGrub algorithm)
+pubgrub = "0.2"
+
+# Parsing
+nom = "7"
+pest = "2"
+pest_derive = "2"
+
+# Performance
+rayon = "1"
+dashmap = "6"
+
+# SIMD-accelerated JSON parsing (API-compatible with serde_json)
+simd-json = "0.14"
+
+# Error handling
+thiserror = "2"
+anyhow = "1"
+
+# Semver parsing
+semver = "1"
+
+# Compression for gem downloads
+flate2 = "1"
+tar = "0.4"
+
+# Checksums
+sha2 = "0.10"
+hex = "0.4"
+
+# Regex for gemspec parsing
+regex = "1"
+
+# Progress bars
+indicatif = "0.17"
+
+# Home directory detection
+dirs = "5"
+
+# CPU count for parallelism
+num_cpus = "1.16"
+
+# Zero-copy serialization for mmap index
+rkyv = { version = "0.8", features = ["bytecheck"] }
+memmap2 = "0.9"
+bytecheck = "0.8"
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+tempfile = "3"
+
+[[bench]]
+name = "resolution"
+harness = false
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"

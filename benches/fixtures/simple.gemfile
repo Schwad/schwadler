@@ -1,0 +1,6 @@
+# Simple Gemfile - 3 gems, minimal dependencies
+source 'https://rubygems.org'
+
+gem 'rack', '~> 3.0'
+gem 'json', '>= 2.0'
+gem 'base64'

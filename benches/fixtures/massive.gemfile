@@ -1,0 +1,210 @@
+# Massive Gemfile - 100+ gems, stress test
+source 'https://rubygems.org'
+
+ruby '3.3.0'
+
+# Core Rails
+gem 'rails', '~> 7.2'
+gem 'pg', '~> 1.5'
+gem 'puma', '~> 6.0'
+gem 'redis', '~> 5.0'
+
+# Assets & Frontend
+gem 'sprockets-rails'
+gem 'importmap-rails'
+gem 'turbo-rails'
+gem 'stimulus-rails'
+gem 'tailwindcss-rails'
+gem 'cssbundling-rails'
+gem 'jsbundling-rails'
+gem 'propshaft'
+
+# Background Jobs
+gem 'sidekiq', '~> 7.0'
+gem 'sidekiq-scheduler'
+gem 'sidekiq-batch'
+gem 'sidekiq-unique-jobs'
+gem 'sidekiq-cron'
+
+# Authentication & Authorization  
+gem 'devise', '~> 4.9'
+gem 'pundit', '~> 2.0'
+gem 'omniauth'
+gem 'omniauth-rails_csrf_protection'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-github'
+gem 'doorkeeper'
+gem 'jwt'
+
+# API & Serialization
+gem 'jbuilder'
+gem 'oj'
+gem 'rack-cors'
+gem 'graphql'
+gem 'graphql-batch'
+gem 'active_model_serializers'
+gem 'jsonapi-serializer'
+gem 'blueprinter'
+
+# File Uploads & Storage
+gem 'image_processing', '~> 1.2'
+gem 'aws-sdk-s3'
+gem 'shrine'
+gem 'carrierwave'
+
+# Search
+gem 'elasticsearch-rails'
+gem 'elasticsearch-model'
+gem 'searchkick'
+gem 'pg_search'
+
+# Caching & Performance
+gem 'bootsnap', require: false
+gem 'dalli'
+gem 'rack-mini-profiler'
+gem 'memory_profiler'
+gem 'stackprof'
+gem 'derailed_benchmarks'
+
+# Monitoring
+gem 'newrelic_rpm'
+gem 'sentry-ruby'
+gem 'sentry-rails'
+gem 'lograge'
+gem 'ahoy_matey'
+gem 'blazer'
+
+# Admin
+gem 'activeadmin'
+gem 'administrate'
+gem 'rails_admin'
+
+# Views & Forms
+gem 'simple_form'
+gem 'pagy'
+gem 'view_component'
+gem 'slim-rails'
+gem 'haml-rails'
+gem 'cells-rails'
+gem 'draper'
+gem 'cocoon'
+
+# State Machines
+gem 'aasm'
+gem 'statesman'
+
+# HTTP Clients
+gem 'faraday'
+gem 'httparty'
+gem 'rest-client'
+gem 'typhoeus'
+
+# PDF Generation
+gem 'prawn'
+gem 'prawn-table'
+gem 'wicked_pdf'
+gem 'grover'
+
+# Excel/CSV
+gem 'caxlsx'
+gem 'roo'
+gem 'smarter_csv'
+
+# Email
+gem 'premailer-rails'
+gem 'roadie-rails'
+
+# Payments
+gem 'stripe'
+gem 'pay'
+gem 'braintree'
+
+# Scheduling
+gem 'whenever'
+gem 'good_job'
+gem 'solid_queue'
+
+# Feature Flags
+gem 'flipper'
+gem 'flipper-redis'
+gem 'flipper-ui'
+
+# Multi-tenancy
+gem 'apartment'
+gem 'acts_as_tenant'
+
+# Soft Deletes
+gem 'paranoia'
+gem 'discard'
+
+# Versioning
+gem 'paper_trail'
+
+# Comments
+gem 'acts_as_commentable'
+
+# Tags
+gem 'acts-as-taggable-on'
+
+# Slug
+gem 'friendly_id'
+
+# Settings
+gem 'rails-settings-cached'
+gem 'config'
+
+# Configuration
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'figaro'
+
+# Code Quality
+gem 'rubocop', require: false
+gem 'rubocop-rails', require: false
+gem 'rubocop-minitest', require: false
+gem 'rubocop-performance', require: false
+gem 'brakeman', require: false
+gem 'bundler-audit', require: false
+gem 'reek', require: false
+gem 'flay', require: false
+gem 'flog', require: false
+
+group :development, :test do
+  gem 'debug'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
+end
+
+group :development do
+  gem 'web-console'
+  gem 'listen'
+  gem 'spring'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'annotate'
+  gem 'letter_opener'
+  gem 'letter_opener_web'
+  gem 'bullet'
+  gem 'solargraph'
+  gem 'erb_lint'
+  gem 'i18n-tasks'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'webmock'
+  gem 'vcr'
+  gem 'minitest-reporters'
+  gem 'simplecov', require: false
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  gem 'timecop'
+  gem 'parallel_tests'
+end
+
+# Timezone data for Windows
+gem 'tzinfo-data', platforms: [:windows, :jruby]
