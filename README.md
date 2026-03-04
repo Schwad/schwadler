@@ -14,6 +14,12 @@ Tested against [Discourse](https://github.com/discourse/discourse) (301 gems):
 ## Installation
 
 ```bash
+# Install from GitHub (requires Rust/Cargo)
+cargo install --git https://github.com/Schwad/schwadler
+
+# Or clone and build locally
+git clone https://github.com/Schwad/schwadler
+cd schwadler
 cargo install --path .
 ```
 
